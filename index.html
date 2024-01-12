@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/Quiz-Phobias/assets/shy-face-svgrepo-com-HTSqjubW.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Creepster&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <meta
+      property="og:title"
+      content="Phobia Quiz: Test Your Knowledge On Unusual Phobias!"
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://medieinstitutet.github.io/fed23d-javascript-grundkurs-gruppuppgift-tangerinerna/"
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://medieinstitutet.github.io/fed23d-javascript-grundkurs-gruppuppgift-tangerinerna/"
+    />
+    <meta
+      property="og:description"
+      content="Phobia Quiz: Test your knowledge on unusal phobias in this interactive web app.
+    Compete for the top spot in the highscore with accuracy and speed. Are you ready?"
+    />
+    <meta
+      name="description"
+      content="Phobia Quiz: Test your knowledge on unusal phobias in this interactive web app. Compete for the top spot in the highscore with accuracy and speed. Are you ready?"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- add image -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org/",
+        "@type": "WebApplication",
+        "name": "Phobia Quiz",
+        "url: "https://medieinstitutet.github.io/fed23d-javascript-grundkurs-gruppuppgift-tangerinerna/",
+        "image": "src/assets/images/shy-face-svgrepo-com.svg",
+        "description": "Phobia Quiz: Test your knowledge on unusal phobias in this interactive web app.
+        Compete for the top spot in the highscore with accuracy and speed. Are you ready?",
+      }
+    </script>
+    <title>Phobia Quiz</title>
+    <script type="module" crossorigin src="/Quiz-Phobias/assets/index-l4ltp6k9.js"></script>
+    <link rel="stylesheet" crossorigin href="/Quiz-Phobias/assets/index-jbjKVeQz.css">
+  </head>
+
+  <body class="light-mode">
+    <header>
+      <section class="top-banner" id="topBanner">
+        <h2>Trivia</h2>
+        <div class="results-panel hidden" id="resultsPanel">
+          <div class="question-number" id="questionNumber">1/10</div>
+          <div class="time-clock" id="mainTimer">00:00</div>
+          <div class="score-panel" id="scorePanel">
+            <img
+              id="highscoreStar"
+              src="data:image/svg+xml,%3c?xml%20version='1.0'%20?%3e%3csvg%20height='58px'%20version='1.1'%20viewBox='0%200%2058%2058'%20width='58px'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%3e%3ctitle/%3e%3cdesc/%3e%3cdefs/%3e%3cg%20fill='none'%20fill-rule='evenodd'%20id='Page-1'%20stroke='none'%20stroke-width='1'%3e%3cg%20id='019---Star'%20transform='translate(-1.000000,%200.000000)'%3e%3cpath%20d='M31.7569,1.14435%20L39.2006,16.94809%20C39.4742047,17.5450605%2040.0274966,17.9662669%2040.67576,18.07109%20L57.32037,20.60534%20C58.0728338,20.7512497%2058.6840769,21.2991656%2058.9110909,22.0312558%20C59.1381048,22.7633461%2058.9440977,23.560962%2058.4062,24.107%20L46.36205,36.40845%20C45.8969861,36.8906851%2045.6879532,37.5647752%2045.79858,38.22553%20L48.64182,55.59553%20C48.7969313,56.3422303%2048.5093863,57.1116407%2047.9025754,57.5735945%20C47.2957646,58.0355484%2046.4775729,58.1079148%2045.7991,57.75964%20L30.9117,49.55864%20C30.3445605,49.2442297%2029.6554395,49.2442297%2029.0883,49.55864%20L14.2009,57.75964%20C13.5224271,58.1079148%2012.7042354,58.0355484%2012.0974246,57.5735945%20C11.4906137,57.1116407%2011.2030687,56.3422303%2011.35818,55.59553%20L14.20142,38.22553%20C14.3120468,37.5647752%2014.1030139,36.8906851%2013.63795,36.40845%20L1.5938,24.107%20C1.05593046,23.5609597%200.861941478,22.7633618%201.08895299,22.0312898%20C1.31596449,21.2992177%201.92718692,20.7513115%202.67963,20.60539%20L19.32424,18.0711%20C19.9725034,17.9662769%2020.5257953,17.5450705%2020.7994,16.9481%20L28.2431,1.14435%20C28.5505421,0.448721422%2029.2394609,-5.16717968e-06%2030,-5.16717968e-06%20C30.7605391,-5.16717968e-06%2031.4494579,0.448721422%2031.7569,1.14435%20Z'%20fill='%23F6AB27'%20id='Shape'/%3e%3cpath%20d='M37.39,13.11%20C32.5890747,15.6770414%2028.15587,18.8791741%2024.21,22.63%20C20.0044812,26.6560517%2016.436883,31.2993247%2013.63,36.4%20L1.59009,24.11%20C1.05224467,23.5636351%200.858777828,22.7655877%201.086713,22.0335783%20C1.31464817,21.3015689%201.92698179,20.7544339%202.67993,20.61%20L19.32007,18.07%20C19.967444,17.9624793%2020.520694,17.5438036%2020.80007,16.95%20L28.24,1.14%20C28.5507895,0.446404951%2029.2399578,1.95277886e-05%2030,1.95277886e-05%20C30.7600422,1.95277886e-05%2031.4492105,0.446404951%2031.76,1.14%20L37.39,13.11%20Z'%20fill='%23F4CD1E'%20id='Shape'/%3e%3c/g%3e%3c/g%3e%3c/svg%3e"
+              width="15"
+              height="15"
+              alt="star icon for highscore"
+            />
+            <div class="current-score" id="currentScore">0</div>
+          </div>
+        </div>
+        <div class="theme-switcher" id="themeSwitcher">
+          <svg
+            fill="none"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM12 20V4C16.4183 4 20 7.58172 20 12C20 16.4183 16.4183 20 12 20Z"
+              fill="currentColor"
+            />
+          </svg>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section class="start-section" id="startSection">
+        <h1 class="intro-heading" id="introHeading">
+          Welcome to the quiz about scary and unusual phobias
+        </h1>
+        <div class="start-container" id="startContainer">
+          <div class="button-container" id="buttonContainer"></div>
+          <div class="flex-container-intro">
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Choose your name"
+              class="name-input name-input-text"
+              aria-label="Your name"
+            />
+            <div class="button-panel">
+              <button
+                class="start-button"
+                id="startButton"
+                aria-label="Start quiz"
+                aria-describedby="startButtonDescription"
+              >
+                Start quiz
+              </button>
+              <p class="error-message hidden" id="errorMessage">No User</p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="center-text-highscore-container"
+          id="centerTextHighscoreContainer"
+        >
+          <p class="rules-text">
+            <span>Rules to play</span>
+            You'll get one question and four answers. The faster you get the
+            right answer, the more points you'll get. If you choose the wrong
+            answer you'll get minus points Will you make it to the Highscore
+            list?
+          </p>
+
+          <div class="list-highscore-container">
+            <p class="highscore-heading">Highscore</p>
+
+            <div class="list-score-output flex-highscore">
+              <ul class="list-split-one">
+                <li>1.</li>
+                <li>2.</li>
+                <li>3.</li>
+                <li>4.</li>
+                <li>5.</li>
+              </ul>
+              <ul class="list-split-two">
+                <li>6.</li>
+                <li>7.</li>
+                <li>8.</li>
+                <li>9.</li>
+                <li>10.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="question-section hidden" id="questionSection">
+        <p class="animation-point hidden" id="animationPoint"></p>
+        <div class="question-container" id="questionContainer"></div>
+        <div class="progress-bar" id="progressBar"></div>
+      </div>
+      <section class="quiz-finished hidden" id="quizFinished">
+        <div class="your-score-box">
+          <p id="yourScore"></p>
+          <p id="finishTime"></p>
+          <p id="userCorrect"></p>
+        </div>
+        <div class="high-score-box">
+          <h2>Highscore</h2>
+          <div class="high-score-list" id="highScoreList">
+            <ul class="list-left">
+              <li>1.</li>
+              <li>2.</li>
+              <li>3.</li>
+              <li>4.</li>
+              <li>5.</li>
+            </ul>
+            <ul class="list-right">
+              <li>6.</li>
+              <li>7.</li>
+              <li>8.</li>
+              <li>9.</li>
+              <li>10.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="finished-buttons-box" id="finishedButtonsBox">
+          <button
+            class="button"
+            id="mainMenuButton"
+            aria-label="Return to the main menu"
+          >
+            Main menu
+          </button>
+          <button
+            class="button"
+            id="restartQuizButton"
+            aria-label="Restart quiz"
+          >
+            Restart quiz
+          </button>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
