@@ -75,7 +75,7 @@ follows common rules for this kind of project.
 
 ## Live Demo
 
-Explore the live demo of the Phobia Quiz [here](https://medieinstitutet.github.io/fed23d-javascript-grundkurs-gruppuppgift-tangerinerna).
+Explore the live demo of the Phobia Quiz [here](https://ralfislask.github.io/Quiz-Phobias/).
 
 ## Status
 
@@ -124,39 +124,6 @@ a new user by writing your name or choose from existing users. Next you will hav
 
 ## Supported screens
 The phopbia quiz have been tested on diffrent screens, we have set the breakpoints for tablet screens 768 px. And for desktop screens 1280px.
-
-
-## Desktop
-### Homepage
-
-![Homepagescreendesktop](./docs/website-screenshots/homepage-big-screen.png)
-
-### Quizpage
-
-![Quizpagescreendesktop](./docs/website-screenshots/quizpage-big-screen.png)
-
-
-### Finishpage
-
-![Finishpagedesktop](./docs/website-screenshots/finishedpage-big-screen.png)
-
-
-## Mobile and tablet
-
-
-### Homepage
-![Homepagescreen](./docs/website-screenshots/homepage-small-screen.png)
-
-![Homepagescreenbottom](./docs/website-screenshots/homepage-small-screen-bottom.png)
-
-
-### Quizpage
-![Quizpagesmallscreens](./docs/website-screenshots/quizpage-small-screen.png)
-
-
-### Finishpage
-![Finishpage](./docs/website-screenshots/finishedpage-small-screen.png)
-
 
 ## Participants
 
